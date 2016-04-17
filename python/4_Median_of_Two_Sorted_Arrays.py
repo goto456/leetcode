@@ -18,8 +18,6 @@ class Solution(object):
         lst2 = list(nums2)
         for i in 
 
-
-
         if lst1:
             lst1.extend(lst2)
         else:
