@@ -8,6 +8,7 @@
 #########################################################################
 
 class Solution(object):
+    # 思路：topK
     def findMedianSortedArrays(self, nums1, nums2):
         """
         :type nums1: List[int]
