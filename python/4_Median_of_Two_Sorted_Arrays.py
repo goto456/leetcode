@@ -27,6 +27,7 @@ class Solution(object):
         index = len(lst1) / 2
         return lst1[index]
 
+
 if __name__ == '__main__':
     nums1 = [2,3]
     nums2 = []
