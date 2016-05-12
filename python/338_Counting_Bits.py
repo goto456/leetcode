@@ -16,3 +16,4 @@ class Solution(object):
         result = []
         for i in range(num):
 
+
