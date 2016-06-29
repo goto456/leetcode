@@ -13,7 +13,13 @@ class Solution(object):
         :type num: int
         :rtype: List[int]
         """
-        result = []
-        for i in range(num):
+        result = [0]
+        for i in range(1, num + 1):
+            if i % 2 == 0:
+                result.append(result[i >> 1])
+            else:
+                result.append(result[i >> 1] + 1)
+        return result
+
 
 
