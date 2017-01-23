@@ -3,7 +3,7 @@ import java.util.List;
 
 /**
  * FileName: FizzBuzz_412.java
- * Description:
+ * Description: 思路很简单，见代码
  * Authors: wangbiwen
  * Date: 17-1-22
  */
