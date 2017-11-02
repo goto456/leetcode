@@ -7,19 +7,45 @@
 public class AddTowNumbers_2 {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result = l1;
-        ListNode cur = result;
+        ListNode cur = l1;
         int temp = 0;
+
         while (l1 != null && l2 != null) {
+            cur = l1;
             temp = temp + l1.val + l2.val;
             cur.val = temp % 10;
             temp /= 10;
             l1 = l1.next;
             l2 = l2.next;
-            cur = cur.next;
         }
-        if (l1 == null) {
+
+        while (l1 != null) {
+            if (temp == 0) {
+                break;
+            }
+            cur = l1;
+            temp += l1.val;
+            cur.val = temp % 10;
+            temp /= 10;
+            l1 = l1.next;
+        }
+
+        while (l2 != null) {
+            cur.next = l2;
+            if (temp == 0) {
+                break;
+            }
             cur = l2;
+            temp += l2.val;
+            cur.val = temp % 10;
+            temp /= 10;
+            l2 = l2.next;
         }
+
+        if (temp > 0) {
+            cur.next = new ListNode(temp);
+        }
+
         return result;
     }
 
@@ -27,17 +53,21 @@ public class AddTowNumbers_2 {
         ListNode l1 = new ListNode(2);
         ListNode cur = l1;
         cur.next = new ListNode(4);
-        cur.next = new ListNode(3);
+        cur = cur.next;
+        cur.next = new ListNode(5);
 
         ListNode l2 = new ListNode(5);
         cur = l2;
         cur.next = new ListNode(6);
+        cur = cur.next;
         cur.next = new ListNode(4);
 
         ListNode result = addTwoNumbers(l1, l2);
-        System.out.println(result);
+        while (result != null) {
+            System.out.print(result.val + "->");
+            result = result.next;
+        }
     }
-
 }
 
 class ListNode {
@@ -47,12 +77,4 @@ class ListNode {
     ListNode(int x) {
         this.val = x;
     }
-
-//    @Override
-//    public String toString() {
-//        return "ListNode{" +
-//                "val=" + val +
-//                ", next=" + next +
-//                '}';
-//    }
 }
