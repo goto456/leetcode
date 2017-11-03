@@ -1,11 +1,12 @@
 /**
  * FileName: AddTowNumbers_2.java
- * Description:
+ * Description: 此解法的优势是复用了其中一个链表来存储结果，节省了空间
  * Authors: wangbiwen
  * Date: 17-11-1
  */
 public class AddTowNumbers_2 {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        //用l1来存储最后结果，节省空间
         ListNode result = l1;
         ListNode cur = l1;
         int temp = 0;
@@ -19,6 +20,7 @@ public class AddTowNumbers_2 {
             l2 = l2.next;
         }
 
+        // 如果l1比较长，继续沿着l1运算
         while (l1 != null) {
             if (temp == 0) {
                 break;
@@ -30,6 +32,7 @@ public class AddTowNumbers_2 {
             l1 = l1.next;
         }
 
+        // 若l2比较长，先将指针指向l2，再沿着l2继续运算
         while (l2 != null) {
             cur.next = l2;
             if (temp == 0) {
@@ -42,6 +45,7 @@ public class AddTowNumbers_2 {
             l2 = l2.next;
         }
 
+        // 如果运算完，产生了进位，则需要新增一个结点
         if (temp > 0) {
             cur.next = new ListNode(temp);
         }
