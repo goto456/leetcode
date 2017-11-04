@@ -17,6 +17,7 @@ public class LongestSubstringWithoutRepeatingCharacters_3 {
 
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
+            // 注意此处的第二个判断条件，虽然出现了重复字符，但不在当前的子串范围内，故不影响
             if (!itemToIndexMap.containsKey(ch) || itemToIndexMap.get(ch) < left) {
                 itemToIndexMap.put(ch, i);
                 continue;
