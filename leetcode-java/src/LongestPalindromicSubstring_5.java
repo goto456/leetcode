@@ -48,23 +48,29 @@ public class LongestPalindromicSubstring_5 {
         int maxRight = 0;
         int[] p = new int[sb.length()];
         for (int i = 0; i < p.length; i++) {
-            p[i] = maxRight > i ? Math.min(p[2 * maxCenter - i], maxRight - i) : i;
+            // j是与关于maxCenter对称的点下标
+            int j = 2 * maxCenter - i;
+            p[i] = maxRight > i ? Math.min(p[j], maxRight - i) : 1;
 
             while (i + p[i] < sb.length() && i - p[i] >=0 && sb.charAt(i + p[i]) == sb.charAt(i - p[i])) {
                 p[i]++;
             }
 
-            if (maxRight < i + p[i]) {
-                maxRight = i + p[i];
+            // 更新最大记录
+            if (maxRight - maxCenter + 1 < p[i]) {
+                maxRight = i + p[i] - 1;
                 maxCenter = i;
             }
         }
 
-        return s.substring(2 * maxCenter - maxRight, maxRight - maxCenter);
+        int oriLen = (maxRight - maxCenter);
+        int oriStart = (maxRight - 1) / 2 - oriLen + 1;
+
+        return s.substring(oriStart, oriLen);
     }
 
     public static void main(String[] args) {
-        String s = "babad";
+        String s = "babadab";
         String result = longestPalindrome(s);
         System.out.println(result);
         result = manacher(s);
