@@ -66,7 +66,7 @@ public class LongestPalindromicSubstring_5 {
         int oriLen = (maxRight - maxCenter);
         int oriStart = (maxRight - 1) / 2 - oriLen + 1;
 
-        return s.substring(oriStart, oriLen);
+        return s.substring(oriStart, oriStart + oriLen);
     }
 
     public static void main(String[] args) {
