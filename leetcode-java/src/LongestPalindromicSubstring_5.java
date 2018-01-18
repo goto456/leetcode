@@ -46,27 +46,29 @@ public class LongestPalindromicSubstring_5 {
 
         int maxCenter = 0;
         int maxRight = 0;
-        int[] p = new int[sb.length()];
-        for (int i = 0; i < p.length; i++) {
+        int oriLen = 0;
+        int oriRight = 0;
+
+        int[] len = new int[sb.length()];
+        for (int i = 0; i < len.length; i++) {
             // j是与关于maxCenter对称的点下标
             int j = 2 * maxCenter - i;
-            p[i] = maxRight > i ? Math.min(p[j], maxRight - i) : 1;
+            len[i] = maxRight > i ? Math.min(len[j], maxRight - i) : 1;
 
-            while (i + p[i] < sb.length() && i - p[i] >=0 && sb.charAt(i + p[i]) == sb.charAt(i - p[i])) {
-                p[i]++;
+            while (i + len[i] < sb.length() && i - len[i] >=0 && sb.charAt(i + len[i]) == sb.charAt(i - len[i])) {
+                len[i]++;
             }
 
-            // 更新最大记录
-            if (maxRight - maxCenter + 1 < p[i]) {
-                maxRight = i + p[i] - 1;
+            // 更新最大记录及原字符串中对应的长度和最右位置
+            if (maxRight - maxCenter + 1 < len[i]) {
+                maxRight = i + len[i] - 1;
                 maxCenter = i;
+                oriLen = len[i] - 1;
+                oriRight = (maxRight - 1) / 2;
             }
         }
 
-        int oriLen = (maxRight - maxCenter);
-        int oriStart = (maxRight - 1) / 2 - oriLen + 1;
-
-        return s.substring(oriStart, oriStart + oriLen);
+        return s.substring(oriRight - oriLen + 1, oriRight + 1);
     }
 
     public static void main(String[] args) {
