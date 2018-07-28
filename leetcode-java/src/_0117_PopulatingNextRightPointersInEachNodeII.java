@@ -2,7 +2,7 @@
  * Authors: wangbiwen
  * Date: 17-11-15
  */
-public class PopulatingNextRightPointersInEachNodeII_117 {
+public class _0117_PopulatingNextRightPointersInEachNodeII {
     public void connect(TreeLinkNode root) {
         TreeLinkNode cur = root;
         TreeLinkNode nextLevelHead = null;

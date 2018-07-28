@@ -4,7 +4,7 @@
  * Authors: wangbiwen
  * Date: 17-1-17
  */
-public class BattleshipsInABoard_419 {
+public class _0419_BattleshipsInABoard {
     public int countBattleships(char[][] board) {
         int rowNum = board.length;
         int colNum = board[0].length;
@@ -27,7 +27,7 @@ public class BattleshipsInABoard_419 {
     }
 
     public static void main(String[] args) {
-        BattleshipsInABoard_419 battlesCounter = new BattleshipsInABoard_419();
+        _0419_BattleshipsInABoard battlesCounter = new _0419_BattleshipsInABoard();
         char[][] board = {
                 {'X', '.', '.', 'X'},
                 {'.', '.', '.', 'X'},

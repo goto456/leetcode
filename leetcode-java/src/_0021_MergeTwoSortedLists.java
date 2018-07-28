@@ -2,7 +2,7 @@
  * Authors: wangbiwen
  * Date: 17-11-15
  */
-public class MergeTwoSortedLists_21 {
+public class _0021_MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null) {
             return l2;

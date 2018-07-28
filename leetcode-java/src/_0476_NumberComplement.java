@@ -4,7 +4,7 @@
  * Authors: wangbiwen
  * Date: 17-1-20
  */
-public class NumberComplement_476 {
+public class _0476_NumberComplement {
     public int findComplement(int num) {
         int mask = 1;
         int temp = num;
@@ -16,7 +16,7 @@ public class NumberComplement_476 {
     }
 
     public static void main(String[] args) {
-        NumberComplement_476 nc = new NumberComplement_476();
+        _0476_NumberComplement nc = new _0476_NumberComplement();
         int num = 5;
         int result = nc.findComplement(num);
         System.out.println(result);

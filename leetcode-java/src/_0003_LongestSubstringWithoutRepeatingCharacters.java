@@ -7,7 +7,7 @@ import java.util.Map;
  * Authors: wangbiwen
  * Date: 17-11-3
  */
-public class LongestSubstringWithoutRepeatingCharacters_3 {
+public class _0003_LongestSubstringWithoutRepeatingCharacters {
     public static int lengthOfLongestSubstring(String s) {
         // 用于记录字符到下标的映射，重复字符记录最大的下标
         Map<Character, Integer> itemToIndexMap = new HashMap<>();

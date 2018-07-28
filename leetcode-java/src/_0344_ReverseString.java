@@ -4,7 +4,7 @@
  * Authors: wangbiwen
  * Date: 17-1-23
  */
-public class ReverseString_344 {
+public class _0344_ReverseString {
     public String reverseString(String s) {
         int length = s.length();
         char[] chars = new char[length];
@@ -19,7 +19,7 @@ public class ReverseString_344 {
     }
 
     public static void main(String[] args) {
-        ReverseString_344 reverse = new ReverseString_344();
+        _0344_ReverseString reverse = new _0344_ReverseString();
         String s = "hello";
         String result = reverse.reverseString(s);
         System.out.println(result);

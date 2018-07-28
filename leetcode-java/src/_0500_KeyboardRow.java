@@ -9,7 +9,7 @@ import java.util.Map;
  * Authors: wangbiwen
  * Date: 17-3-2
  */
-public class KeyboardRow_500 {
+public class _0500_KeyboardRow {
     public String[] findWords(String[] words) {
         String[] alphabet = {"qwertyuiop", "asdfghjkl", "zxcvbnm"};
         Map<Character, Integer> alphabetMap = new HashMap<>();
@@ -36,7 +36,7 @@ public class KeyboardRow_500 {
     }
 
     public static void main(String[] args) {
-        KeyboardRow_500 keyboardRow = new KeyboardRow_500();
+        _0500_KeyboardRow keyboardRow = new _0500_KeyboardRow();
         String[] words = {"Hello", "Alaska", "Dad", "Peace"};
         String[] result = keyboardRow.findWords(words);
         for (String word : result) {

@@ -4,7 +4,7 @@
  * Authors: wangbiwen
  * Date: 17-1-24
  */
-public class IslandPerimeter_463 {
+public class _0463_IslandPerimeter {
     public int islandPerimeter(int[][] grid) {
         int perimeter = 0;
         int row = grid.length;
@@ -26,7 +26,7 @@ public class IslandPerimeter_463 {
     }
 
     public static void main(String[] args) {
-        IslandPerimeter_463 island = new IslandPerimeter_463();
+        _0463_IslandPerimeter island = new _0463_IslandPerimeter();
         int[][] grid = {
                 {0, 1, 0, 0},
                 {1, 1, 1, 0},

@@ -2,7 +2,7 @@
  * Authors: wangbiwen
  * Date: 17-11-15
  */
-public class MedianOfTwoSortedArrays_4 {
+public class _0004_MedianOfTwoSortedArrays {
 
     // 初步想法，思路类似merge两个有序数组，时间复杂度是O(m + n)，不符合要求
     public static double findMedianSortedArrays1(int[] nums1, int[] nums2) {

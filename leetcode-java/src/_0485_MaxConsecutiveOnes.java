@@ -4,7 +4,7 @@
  * Authors: wangbiwen
  * Date: 17-1-18
  */
-public class MaxConsecutiveOnes_485 {
+public class _0485_MaxConsecutiveOnes {
     public int findMaxConsecutiveOnes(int[] nums) {
         int maxCount = 0;
         int curCount = 0;
@@ -20,7 +20,7 @@ public class MaxConsecutiveOnes_485 {
     }
 
     public static void main(String[] args) {
-        MaxConsecutiveOnes_485 mco = new MaxConsecutiveOnes_485();
+        _0485_MaxConsecutiveOnes mco = new _0485_MaxConsecutiveOnes();
         int[] nums = {1, 1, 0, 1, 1, 1};
         int result = mco.findMaxConsecutiveOnes(nums);
         System.out.println(result);

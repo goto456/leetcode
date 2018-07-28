@@ -4,7 +4,7 @@
  * Authors: wangbiwen
  * Date: 17-1-19
  */
-public class CountingBits_338 {
+public class _0338_CountingBits {
     public int[] countBits(int num) {
         int[] result = new int[num + 1];
         for (int i = 1; i <= num; i++) {
@@ -18,7 +18,7 @@ public class CountingBits_338 {
     }
 
     public static void main(String[] args) {
-        CountingBits_338 counter = new CountingBits_338();
+        _0338_CountingBits counter = new _0338_CountingBits();
         int num = 5;
         int[] result = counter.countBits(num);
         for (int i = 0; i < result.length; i++)

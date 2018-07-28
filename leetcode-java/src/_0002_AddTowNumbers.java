@@ -4,7 +4,7 @@
  * Authors: wangbiwen
  * Date: 17-11-1
  */
-public class AddTowNumbers_2 {
+public class _0002_AddTowNumbers {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         //用l1来存储最后结果，节省空间
         ListNode result = l1;

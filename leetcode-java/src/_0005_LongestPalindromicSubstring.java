@@ -1,7 +1,7 @@
 /**
  * Created by goto456 on 2017/11/19.
  */
-public class LongestPalindromicSubstring_5 {
+public class _0005_LongestPalindromicSubstring {
     /**
      * 解法1：中心扩展方法
      */

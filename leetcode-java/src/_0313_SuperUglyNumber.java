@@ -1,7 +1,7 @@
 /**
  * Created by wangbiwen on 2017/5/31.
  */
-public class SuperUglyNumber_313 {
+public class _0313_SuperUglyNumber {
     public static int nthSuperUglyNumber(int n, int[] primes) {
         int k = primes.length;
         int[] superUglyNumber = new int[n];

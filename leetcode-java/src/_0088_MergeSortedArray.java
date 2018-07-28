@@ -1,7 +1,7 @@
 /**
  * Created by goto456 on 2017/11/15.
  */
-public class MergeSortedArray_88 {
+public class _0088_MergeSortedArray {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int i = m - 1;
         int j = n - 1;

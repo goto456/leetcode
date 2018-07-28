@@ -7,7 +7,7 @@ import java.util.List;
  * Authors: wangbiwen
  * Date: 17-1-22
  */
-public class FizzBuzz_412 {
+public class _0412_FizzBuzz {
     public List<String> fizzBuzz(int n) {
         List<String> result = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
@@ -25,7 +25,7 @@ public class FizzBuzz_412 {
     }
 
     public static void main(String[] args) {
-        FizzBuzz_412 fizzBuzz = new FizzBuzz_412();
+        _0412_FizzBuzz fizzBuzz = new _0412_FizzBuzz();
         int n = 15;
         List<String> result = fizzBuzz.fizzBuzz(n);
         System.out.println(result);

@@ -5,7 +5,7 @@ import java.util.List;
  * Created by goto456 on 28/07/2018.
  *
  */
-public class _6_ZigZagConversion {
+public class _0006_ZigZagConversion {
 
     public static String convert1(String s, int numRows) {
         if (s.length() == 1 || numRows < 2) {

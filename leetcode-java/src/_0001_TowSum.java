@@ -7,7 +7,7 @@ import java.util.Map;
  * Authors: wangbiwen
  * Date: 17-10-26
  */
-public class TowSum_1 {
+public class _0001_TowSum {
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> itemToIndex = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {

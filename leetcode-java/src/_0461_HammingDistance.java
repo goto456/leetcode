@@ -4,7 +4,7 @@
  * Authors: wangbiwen
  * Date: 17-1-10
  */
-public class HammingDistance_461 {
+public class _0461_HammingDistance {
     public int hammingDistance(int x, int y) {
         int z = x ^ y;
         int count = 0;
@@ -16,7 +16,7 @@ public class HammingDistance_461 {
     }
 
     public static void main(String[] args) {
-        HammingDistance_461 hmd = new HammingDistance_461();
+        _0461_HammingDistance hmd = new _0461_HammingDistance();
         int x = 1;
         int y = 4;
         int distance = hmd.hammingDistance(x, y);

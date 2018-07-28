@@ -4,7 +4,7 @@
  * Authors: wangbiwen
  * Date: 17-2-4
  */
-public class NimGame_292 {
+public class _0292_NimGame {
     public boolean canWinNim(int n) {
         if (n % 4 == 0) {
             return false;
@@ -13,7 +13,7 @@ public class NimGame_292 {
     }
 
     public static void main(String[] args) {
-        NimGame_292 nimGame = new NimGame_292();
+        _0292_NimGame nimGame = new _0292_NimGame();
         int n = 4;
         boolean result = nimGame.canWinNim(n);
         System.out.println(result);
