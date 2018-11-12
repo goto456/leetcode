@@ -1,7 +1,7 @@
 /**
  * Created by goto456 on 2018/11/12.
  */
-public class _009_PalindromeNumber {
+public class _0009_PalindromeNumber {
     public static boolean isPalindrome(int x) {
         if (x == 0) {
             return true;
