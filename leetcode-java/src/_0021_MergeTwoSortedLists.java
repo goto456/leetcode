@@ -11,28 +11,17 @@ public class _0021_MergeTwoSortedLists {
             return l1;
         }
 
-        ListNode result = null;
-        ListNode cur = null;
+        ListNode result = new ListNode(0);
+        ListNode cur = result;
         while (l1 != null && l2 != null) {
             if (l1.val < l2.val) {
-                if (cur == null) {
-                    result = l1;
-                    cur = l1;
-                } else {
-                    cur.next = l1;
-                    cur = cur.next;
-                }
+                cur.next = l1;
                 l1 = l1.next;
             } else {
-                if (cur == null) {
-                    result = l2;
-                    cur = l2;
-                } else {
-                    cur.next = l2;
-                    cur = cur.next;
-                }
+                cur.next = l2;
                 l2 = l2.next;
             }
+            cur = cur.next;
         }
         if (l1 != null) {
             cur.next = l1;
@@ -41,7 +30,7 @@ public class _0021_MergeTwoSortedLists {
             cur.next = l2;
         }
 
-        return result;
+        return result.next;
     }
 }
 
