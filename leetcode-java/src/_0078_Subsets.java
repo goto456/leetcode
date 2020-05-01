@@ -5,7 +5,7 @@ import java.util.List;
  * 回溯法解子集问题
  * Created by goto456 on 2020/4/29.
  */
-public class _78_Subsets {
+public class _0078_Subsets {
     public List<List<Integer>> result = new LinkedList<>();
     public List<List<Integer>> subsets(int[] nums) {
         LinkedList<Integer> track = new LinkedList<>();
