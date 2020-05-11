@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -5,7 +6,7 @@ import java.util.Queue;
 /**
  * Created by goto456 on 2020/5/10.
  */
-public class _00102_BinaryTreeLevelOrderTraversal {
+public class _0102_BinaryTreeLevelOrderTraversal {
 
     /**
      * 非递归解法，用队列
