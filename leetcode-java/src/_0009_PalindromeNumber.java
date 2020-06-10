@@ -17,6 +17,7 @@ public class _0009_PalindromeNumber {
             x /= 10;
         }
 
+        // 奇数对折需要去掉中间那个数
         return x == reverse || x == reverse / 10;
     }
 
