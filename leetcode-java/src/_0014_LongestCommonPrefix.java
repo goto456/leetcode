@@ -11,6 +11,7 @@ public class _0014_LongestCommonPrefix {
         for (int i = 1; i < strs.length; i++) {
             while (strs[i].indexOf(curPrefix) != 0) {
                 curPrefix = curPrefix.substring(0, curPrefix.length() - 1);
+                // 表示无公共部分，无需继续，直接返回
                 if (curPrefix.isEmpty()) {
                     return "";
                 }
