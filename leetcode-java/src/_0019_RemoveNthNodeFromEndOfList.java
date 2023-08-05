@@ -23,6 +23,31 @@ public class _0019_RemoveNthNodeFromEndOfList {
         return head;
     }
 
+    // 第二种解法，更简单明白
+    public static ListNode removeNthFromEnd2(ListNode head, int n) {
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        // 找到倒数第N+1个节点
+        ListNode p = findNthFromEnd(dummy, n + 1);
+        // 删除倒数第N个节点
+        p.next = p.next.next;
+        return dummy.next;
+    }
+
+    // 找到倒数第N个节点
+    public static ListNode findNthFromEnd(ListNode head, int n) {
+        ListNode p1 = head;
+        for (int i = 0; i < n; i++) {
+            p1 = p1.next;
+        }
+        ListNode p2 = head;
+        while (p1 != null) {
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        return p2;
+    }
+
     static class ListNode {
         int val;
         ListNode next;
@@ -53,7 +78,7 @@ public class _0019_RemoveNthNodeFromEndOfList {
 
         printNode(head);
         int n = 2;
-        ListNode result = removeNthFromEnd(head, n);
+        ListNode result = removeNthFromEnd2(head, n);
         printNode(result);
     }
 }
